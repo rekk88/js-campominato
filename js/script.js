@@ -15,8 +15,8 @@ document.getElementById("start").addEventListener("click",function(){
             i--;
         }
     }
-   
-    for(var i=0 ; i < 5; i++){
+    console.log(numbers);
+    for(var i=0 ; i < 84; i++){ // i < 5 perchè con 84 non finisco più
         //input di un max di 84 numeri senza ripetizioni 
         x = parseInt(prompt("inserisci un numero : "));
         if(!vet.includes(x)){ //se il numero inserito non è già stato inserito
@@ -26,8 +26,14 @@ document.getElementById("start").addEventListener("click",function(){
             i--;
             alert("NOH !!!! Il numero inserito è già presente");
         }
-  
+        if(numbers.includes(x)){ //il numero è uno dei 16 numeri proibiti e quindi la partita termina qui 
+            i=100; //uscita forzata dal ciclo
+        }
+        //se il numero nn è uno dei 16 allora il gioco continua
     }
+    var punteggio = vet.length; // punteggio = quantità di numeri inseriti dall'utente
+    console.log(vet);
+    alert("hai fatto " + punteggio + " punti");
     // console.log(numbers);
     // console.log(random);
 });
