@@ -4,11 +4,34 @@ document.getElementById("start").addEventListener("click",function(){
     var numbers = []; //array dei numeri generati dal PC
     var vet = []; //array dei numeri inseriti dall'utente
     var x; //variabile per l'input dell'utente
+    var difficoltà;
     var min; // estremo inferiore per l'intervallo dei numeri random
     var max; // estremo superiore per l'intervallo dei numeri random
+
+    do{
+        alert("scegli la difficoltà  : 1 , 2 o 3 ");
+        difficoltà = parseInt(prompt("difficoltà : "));
+        console.log(difficoltà);
+    }
+    while(difficoltà != 1 && difficoltà != 2 && difficoltà != 3);
+
+    switch(difficoltà){
+        case 1 :
+            min = 1;
+            max = 100;
+            break;
+        case 2 :
+            min = 1;
+            max = 80;
+            break;
+        case 3 :
+            min = 1;
+            max = 50;
+            break;
+        default:
+            alert("non dovresti essere qui");
+    }
     
-    min = 0;
-    max = 100;
     //genero i 16 numeri random
     for(var i =0; i < 16 ; i++){
         random = rand(min , max);
@@ -22,7 +45,11 @@ document.getElementById("start").addEventListener("click",function(){
     console.log(numbers);
     for(var i=0 ; i < 84; i++){ // i < 5 perchè con 84 non finisco più
         //input di un max di 84 numeri senza ripetizioni 
-        x = parseInt(prompt("inserisci un numero : "));
+        do{
+            x = parseInt(prompt("inserisci un numero : "));
+        }
+        while(!(x >= min && x <= max)); //controllo che il numero inserito sia compreso nell'intervallo 
+        console.log("il numero inserito è corretto");
         if(!vet.includes(x)){ //se il numero inserito non è già stato inserito
             vet.push(x);
         } 
