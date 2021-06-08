@@ -4,10 +4,14 @@ document.getElementById("start").addEventListener("click",function(){
     var numbers = []; //array dei numeri generati dal PC
     var vet = []; //array dei numeri inseriti dall'utente
     var x; //variabile per l'input dell'utente
-
+    var min; // estremo inferiore per l'intervallo dei numeri random
+    var max; // estremo superiore per l'intervallo dei numeri random
+    
+    min = 0;
+    max = 100;
     //genero i 16 numeri random
     for(var i =0; i < 16 ; i++){
-        random = rand();
+        random = rand(min , max);
         if(!numbers.includes(random)){
             numbers.push(random);
         }
@@ -53,6 +57,7 @@ document.getElementById("start").addEventListener("click",function(){
 //--------------functions -------------
 
 //genera un numero random x con 1<= x <= 100
-function rand(){
-    return Math.floor(Math.random() * 100 + 1);
+function rand(max , min){
+    return Math.floor(Math.random() * (max - min ) + min);
 }
+// * (max - min) + min 
