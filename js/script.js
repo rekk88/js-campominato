@@ -31,8 +31,9 @@ document.getElementById("start").addEventListener("click",function(){
         }
         //se il numero nn è uno dei 16 allora il gioco continua
     }
-    var punteggio = vet.length; // punteggio = quantità di numeri inseriti dall'utente
+    var punteggio = vet.length - 1; // punteggio = quantità di numeri inseriti dall'utente
     console.log(vet);
+    console.log(punteggio);
     alert("hai fatto " + punteggio + " punti");
     // console.log(numbers);
     // console.log(random);
