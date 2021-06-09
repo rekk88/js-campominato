@@ -4,12 +4,11 @@
     box-sizing: border-box;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .container{
     width: 80%;
     max-width: 1080px;
-    margin: 0 auto;
     background-color: lightblue;
 
     /* centratura vert. e orizz. */
@@ -17,9 +16,27 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
+
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+.btn_start{
+    display: flex;
+    justify-content: center;
+}
+button#start{
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    align-self: center;
+}
 
+.numeri{
+    text-align: center;
+    font-size: 1.5rem
+}
 
 
 /* debug */
@@ -27,4 +44,9 @@ body{
 
 .debug .container{
     min-height: 500px;
+}
+.debug .numeri{
+    background-color: red;
+    width: 100%;    
+    align-self: flex-start;
 }
