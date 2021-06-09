@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.w_100{
+    width: 100% !important;
+}
+
 body{
     overflow-x: hidden;
 }
@@ -21,6 +26,8 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
 }
 
 .btn_start{
@@ -33,9 +40,12 @@ button#start{
     align-self: center;
 }
 
-.numeri{
+.output{
     text-align: center;
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    width: 100%;    
+    align-self: flex-start;
+    margin-top: 2rem;
 }
 
 
@@ -45,8 +55,7 @@ button#start{
 .debug .container{
     min-height: 500px;
 }
-.debug .numeri{
+.debug .output{
     background-color: red;
-    width: 100%;    
-    align-self: flex-start;
+    
 }
