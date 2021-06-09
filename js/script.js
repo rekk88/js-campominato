@@ -61,11 +61,11 @@ document.getElementById("start").addEventListener("click",function(){
             i=100; //uscita forzata dal ciclo
         }
         //se il numero nn è uno dei 16 allora il gioco continua
-        if(i == 83){
+        if(i == 83){ //se l'utente riesce ad inserire tutti gli 83 numeri allora vince
             vittoria = true
         }
     }
-    var punteggio = vet.length - 1; // punteggio = quantità di numeri inseriti dall'utente
+    var punteggio = vet.length - 1; // punteggio = quantità di numeri corretti inseriti dall'utente
     console.log(vet);
     console.log(punteggio);
     if (vittoria){
@@ -89,7 +89,7 @@ document.getElementById("start").addEventListener("click",function(){
 
 //--------------functions -------------
 
-//genera un numero random x con 1<= x <= 100
+//genera un numero random x con min<= x <= max
 function rand(max , min){
     return Math.floor(Math.random() * (max - min ) + min);
 }
