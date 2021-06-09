@@ -7,7 +7,7 @@ document.getElementById("start").addEventListener("click",function(){
     var difficoltà;
     var min; // estremo inferiore per l'intervallo dei numeri random
     var max; // estremo superiore per l'intervallo dei numeri random
-
+    var vittoria = false;
     do{
         alert("scegli la difficoltà  : 1 , 2 o 3 ");
         difficoltà = parseInt(prompt("difficoltà : "));
@@ -61,10 +61,16 @@ document.getElementById("start").addEventListener("click",function(){
             i=100; //uscita forzata dal ciclo
         }
         //se il numero nn è uno dei 16 allora il gioco continua
+        if(i == 83){
+            vittoria = true
+        }
     }
     var punteggio = vet.length - 1; // punteggio = quantità di numeri inseriti dall'utente
     console.log(vet);
     console.log(punteggio);
+    if (vittoria){
+        alert("hai vinto !!");
+    }
     alert("hai fatto " + punteggio + " punti");
     // console.log(numbers);
     // console.log(random);
