@@ -8,6 +8,7 @@ document.getElementById("start").addEventListener("click",function(){
     var min; // estremo inferiore per l'intervallo dei numeri random
     var max; // estremo superiore per l'intervallo dei numeri random
     var vittoria = false;
+
     do{
         alert("scegli la difficoltà  : 1 , 2 o 3 ");
         difficoltà = parseInt(prompt("difficoltà : "));
@@ -43,7 +44,7 @@ document.getElementById("start").addEventListener("click",function(){
         }
     }
     console.log(numbers);
-    for(var i=0 ; i < 84; i++){ // i < 5 perchè con 84 non finisco più
+    for(var i=0 ; i < (max - 16); i++){ // i < 5 perchè con 84 non finisco più
         //input di un max di 84 numeri senza ripetizioni 
         do{
             x = parseInt(prompt("inserisci un numero : "));
@@ -52,6 +53,9 @@ document.getElementById("start").addEventListener("click",function(){
         console.log("il numero inserito è corretto");
         if(!vet.includes(x)){ //se il numero inserito non è già stato inserito
             vet.push(x);
+            if(!numbers.includes(x)){
+                document.getElementById("numbers").innerHTML +=  " | "+ x + " | "; //visualizzazione numeri inseriti
+            }
         } 
         else{ //il numero è già stato inserito
             i--;
@@ -65,6 +69,7 @@ document.getElementById("start").addEventListener("click",function(){
             vittoria = true
         }
     }
+   
     var punteggio = vet.length - 1; // punteggio = quantità di numeri corretti inseriti dall'utente
     console.log(vet);
     console.log(punteggio);
@@ -72,6 +77,7 @@ document.getElementById("start").addEventListener("click",function(){
         alert("hai vinto !!");
     }
     alert("hai fatto " + punteggio + " punti");
+    document.getElementById("punteggio").innerHTML = punteggio + " PUNTI !!!!!!!"
     // console.log(numbers);
     // console.log(random);
 });

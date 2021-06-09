@@ -7,14 +7,29 @@
 .w_100{
     width: 100% !important;
 }
+.pt_20{
+    padding-top: 20px !important;
+}
+/* classi dispplay da gestire con js */
+.display_none{
+    display: none;
+}
+.display_block{
+    display: block;
+}
+
+
 
 body{
     overflow-x: hidden;
+    font-family: 'Baloo Tammudu 2', cursive;
 }
 .container{
     width: 80%;
     max-width: 1080px;
-    background-color: lightblue;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 50px #918787;
+    border-radius: 1rem;
 
     /* centratura vert. e orizz. */
     position: absolute;
@@ -24,27 +39,26 @@ body{
 
 
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     text-align: center;
     align-items: center;
-}
-
-.btn_start{
-    display: flex;
-    justify-content: center;
 }
 button#start{
     padding: 5px 10px;
     font-size: 1.1rem;
-    align-self: center;
+    background-color: #ffc107;
+    border-radius: 0.5rem;
+    border-color: #ffc107;
+    transition: background-color 0.5s;
+}
+button#start:hover{
+    background-color: #ce9f13;
+    border-color: #ce9f13;
 }
 
 .output{
     text-align: center;
     font-size: 1.5rem;
     width: 100%;    
-    align-self: flex-start;
     margin-top: 2rem;
 }
 
@@ -53,9 +67,5 @@ button#start{
 
 
 .debug .container{
-    min-height: 500px;
 }
-.debug .output{
-    background-color: red;
     
-}
