@@ -44,6 +44,7 @@ document.getElementById("start").addEventListener("click",function(){
         }
     }
     console.log(numbers);
+    document.getElementById("out").className = "output display_block";
     for(var i=0 ; i < (max - 16); i++){ // i < 5 perchè con 84 non finisco più
         //input di un max di 84 numeri senza ripetizioni 
         do{
