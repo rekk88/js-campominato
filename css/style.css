@@ -3,14 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    overflow: hidden;
+}
 .container{
     width: 80%;
     max-width: 1080px;
     margin: 0 auto;
     background-color: lightblue;
 
-
+    /* centratura vert. e orizz. */
     position: absolute;
     top: 50%;
     left: 50%;
