@@ -5,7 +5,7 @@ document.getElementById("start").addEventListener("click",function(){
     var vet = []; //array dei numeri inseriti dall'utente
     var x; //variabile per l'input dell'utente
     var difficoltà;
-    var min; // estremo inferiore per l'intervallo dei numeri random
+    var min = 1; // estremo inferiore per l'intervallo dei numeri random
     var max; // estremo superiore per l'intervallo dei numeri random
     var vittoria = false;
 
@@ -18,15 +18,12 @@ document.getElementById("start").addEventListener("click",function(){
 
     switch(difficoltà){
         case 1 :
-            min = 1;
             max = 100;
             break;
         case 2 :
-            min = 1;
             max = 80;
             break;
         case 3 :
-            min = 1;
             max = 50;
             break;
         default:
